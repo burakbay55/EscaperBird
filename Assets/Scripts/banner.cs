@@ -8,7 +8,7 @@ public class banner : MonoBehaviour
     void Start()
     {
         RequestConfiguration reklamKonfigurasyonu = new RequestConfiguration.Builder()
-    .SetTestDeviceIds( new System.Collections.Generic.List<string>() { "1cb8d73d" } )
+    .SetTestDeviceIds( new System.Collections.Generic.List<string>() { "" } )
     .build();
  
     MobileAds.SetRequestConfiguration( reklamKonfigurasyonu );
@@ -16,7 +16,7 @@ public class banner : MonoBehaviour
         MobileAds.Initialize(initStatus => {} );
         
 
-        this.reklamObject = new BannerView("ca-app-pub-3940256099942544/6300978111", AdSize.SmartBanner, AdPosition.Bottom);
+        this.reklamObject = new BannerView("", AdSize.SmartBanner, AdPosition.Bottom);
         AdRequest requestBanner = new AdRequest.Builder().Build();
         this.reklamObject.LoadAd(requestBanner);
     }
