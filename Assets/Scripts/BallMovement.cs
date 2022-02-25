@@ -25,7 +25,7 @@ public class BallMovement : MonoBehaviour
 
     private void requestInterstitial()
     {
-        reklam = new InterstitialAd("ca-app-pub-3940256099942544/1033173712");
+        reklam = new InterstitialAd("");
         
         AdRequest adRequest = new AdRequest.Builder().Build();
         reklam.LoadAd(adRequest);
